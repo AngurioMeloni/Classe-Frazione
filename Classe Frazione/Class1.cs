@@ -75,6 +75,13 @@ namespace Classe_Frazione
                 int N_denominatore = denominatore * altraFrazione.denominatore;
                 return new Frazione(Numeratore,N_numeratore);
             }
+            public Frazione Moltiplica(Frazione altraFrazione)
+            {
+                int N_numeratore = numeratore * altraFrazione.denominatore;
+                int N_denominatore = denominatore * altraFrazione.numeratore;
+                return new Frazione(Numeratore, N_numeratore);
+            }
+            public
         }
     }
 }
