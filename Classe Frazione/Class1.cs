@@ -69,6 +69,12 @@ namespace Classe_Frazione
                 int N_denominatore = denominatore * altraFrazione.denominatore;
                 return new Frazione(N_numeratore,N_denominatore);
             }
+            public Frazione Sottrai(Frazione altraFrazione)
+            {
+                int N_numeratore = numeratore * altraFrazione.denominatore - altraFrazione.numeratore * denominatore;
+                int N_denominatore = denominatore * altraFrazione.denominatore;
+                return new Frazione(Numeratore,N_numeratore);
+            }
         }
     }
 }
