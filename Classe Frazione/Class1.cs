@@ -12,7 +12,7 @@ namespace Classe_Frazione
         {
             private int numeratore;
             private int denominatore;
-            public Frazione()
+            public Frazione(int numeratore,int denominatore)
             {
                 Numeratore = numeratore;
                 Denominatore = denominatore;
@@ -62,6 +62,12 @@ namespace Classe_Frazione
                 int mcd = Calcola_Mcd(numeratore,denominatore);
                 numeratore /= mcd;
                 denominatore /= mcd;
+            }
+            public Frazione Somma(Frazione altraFrazione)
+            {
+                int N_numeratore = numeratore * altraFrazione.Denominatore + altraFrazione.numeratore * denominatore;
+                int N_denominatore = denominatore * altraFrazione.denominatore;
+                return new Frazione(N_numeratore,N_denominatore);
             }
         }
     }
