@@ -87,6 +87,19 @@ namespace Classe_Frazione
                 int N_denominatore = denominatore * altraFrazione.numeratore;
                 return new Frazione(N_numeratore, N_denominatore);
             }
+            public Frazione(Frazione altraFrazione)
+            {
+                numeratore = altraFrazione.numeratore;
+                denominatore = altraFrazione.denominatore;
+            }
+            public Frazione Clone()
+            {
+                return new Frazione(this);
+            }
+            public override string ToString()
+            {
+                return $"{numeratore}/{denominatore}";
+            }
         }
     }
 }
