@@ -47,6 +47,22 @@ namespace Classe_Frazione
                     }
                 }
             }
+            private int Calcola_Mcd(int a , int b)
+            {
+                while(b != 0)
+                {
+                    int temp = b;
+                    b = a % b;
+                    a = temp;
+                }
+                return a;
+            }
+            public void Semplifica()
+            {
+                int mcd = Calcola_Mcd(numeratore,denominatore);
+                numeratore /= mcd;
+                denominatore /= mcd;
+            }
         }
     }
 }
